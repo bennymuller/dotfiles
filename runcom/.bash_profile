@@ -1,3 +1,11 @@
+# Set architecture flags
+export ARCHFLAGS="-arch x86_64"
+# Ensure user-installed binaries take precedence
+export PATH=/usr/local/bin:$PATH
+# Load .bashrc if it exists
+test -f ~/.bashrc && source ~/.bashrc
+
+
 # If not running interactively, don't do anything
 
 [ -z "$PS1" ] && return
@@ -60,3 +68,4 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
 export OS DOTFILES_DIR EXTRA_DIR
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export WORKON_HOME=~/Envs
